@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnw2wqb7bqr07"]
+
+[ext_resource type="Texture2D" uid="uid://dj0dg3s834ckd" path="res://assets/images/file.png" id="1_0d8sq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cs7gr"]
+bounce = 0.4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqduy"]
+size = Vector2(36, 47)
+
+[node name="Filez" type="RigidBody2D"]
+position = Vector2(258, -61)
+physics_material_override = SubResource("PhysicsMaterial_cs7gr")
+gravity_scale = 1.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_qqduy")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -124.0
+offset_top = 31.0
+offset_right = 120.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "file.txt"
+horizontal_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Icon" type="TextureRect" parent="."]
+offset_left = -28.0
+offset_top = -27.0
+offset_right = 308.0
+offset_bottom = 309.0
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("1_0d8sq")
+expand_mode = 1
+stretch_mode = 5
